@@ -1,0 +1,150 @@
+﻿.pageview .navbar .left {
+    left: 0;
+    position: absolute;
+}
+.blogdetails .navbar .left, .favorites .navbar .left {
+    right: 0;
+    position: absolute;
+}
+.blogdetails .navbar .center, .favorites .navbar .center {
+    right: 39px;
+}
+.menu li a i{margin-right: 10px;margin-left: 10px;}
+img.article {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+.swiper-slide img{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+}
+div.article {
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0 0px 46% 0px;
+    box-sizing: border-box;
+    margin: 10px 16px 0 16px;
+}
+#blog_content p,#favorites_content p {
+   margin: 0.7em 0 0.9em 0;
+	font-size: 13px;
+}
+article .content-block h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 0.9em;
+}
+.blog article .content-block {
+    padding: 16px 16px 7px 16px;
+}
+.blogdetails article .content-block {
+    /* padding: 16px 16px 7px 16px; */
+    padding: 7px 16px 7px 16px;
+}
+.blogdetails h2{margin-bottom:7px;}
+#blog_content .item-content p,#favorites_content .item-content p {
+    min-height: 137px;
+}
+#blog_content .separator,#favorites_content .separator {
+    margin-top: 0px;
+    margin: 0 16px;
+}
+span.btn_text {
+   display: inline-block;
+   float: left;
+	font-size: 12px;
+}
+span.btn_date {
+    display: inline-block;
+    float: right;
+	font-size: 12px;
+}
+div#text-container, div#text-container p {
+    font-size: 13px;
+    text-align: justify;
+    direction: rtl;
+}
+div#video-container {
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+div#gallery-container {
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+div#sound-container {
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+div#gallery-container .ks-carousel-slider .swiper-slide {
+    border: 0px solid #ccc;
+}
+#slider_content .ks-carousel-slider .swiper-slide {
+    border: 0px solid #ccc;
+}
+.button.button-fill.color-teal {
+    background-color: #f2f2f2 !important;
+    border: 0px solid transparent;
+}
+.socials li a.tw {
+    line-height: 44px;
+}
+.socialblock {
+    position: relative;
+    overflow: hidden;
+    padding: 16px 16px;
+}
+span.copyright-text {
+    color: #ffffff;
+    top: 18px;
+    display: inline-block;
+    float: right;
+    position: relative;
+}
+.socialblock ul.socials {
+    top: 4px;
+    float: left;
+}
+.landingpage .bgimg {
+    position: absolute;
+    z-index: 0;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+}
+#slider_content h2 {
+    position: absolute;
+    color: #000000;
+    width: 100%;
+    bottom: 0;
+    background-color: #ffffff85;
+    font-size: 15px;
+    padding: 2px 16px;
+}
+.blog .swiper-pagination.swiper-pagination-c2.swiper-pagination-bullets {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
