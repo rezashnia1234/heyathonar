@@ -78,7 +78,7 @@
 <script>
 var server_url = "https://dlsmgroup.ir/heyat/";
 var networkState;
-/*
+
 function init() {
 	document.addEventListener("deviceready", onDeviceReady, false);
 }
@@ -104,10 +104,9 @@ function onDeviceReady() {
 	}, 500);
 	//myApp.init();
 }
-*/
+
 setTimeout(function(){
-	//if(!window.cordova)
-	if(!window.cordova || true)
+	if(!window.cordova)
 	{
 		if(navigator.connection.type)
 			networkState = navigator.connection.type;
@@ -138,6 +137,7 @@ setTimeout(function(){
 </script>
 
 <script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/console.log.js"></script> 
 <script src="cordova.js"></script>
 <script type="text/javascript" src="js/framework7.min.js"></script> 
 <script type="text/javascript" src="js/jquery.swipebox.js"></script> 
