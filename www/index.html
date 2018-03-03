@@ -22,8 +22,59 @@
 <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="theme-red">
+<div class="statusbar-overlay"></div>
+<div class="panel-overlay"></div>
+<div class="panel panel-left panel-reveal sidebar">
+  <div class="view">
+    <div class=" ">
+      <div data-page="panel-left" class="sidemenu leftmenusmall gradient">
+          <div class="list-block accordion-list">
+					<br/><br/>
+              <ul class="menu">
+					   <li class="accordion-item">
+							<li><a href="index.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-map"></i><span>لیست اخبار</span></div></a></li>
+							<li><a href="index.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-map"></i><span>تماس با ما</span></div></a></li>
+							<li><a href="index.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-map"></i><span>درباره ما</span></div></a></li>
+							<li><a href="index.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-map"></i><span>تولید کننده</span></div></a></li>
+						</li>         
+              </ul>         
+			</div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+    
+<div class="views pageview" >
+  <div class="view view-main">
+    <div class="pages">
+      <div data-page="index" class="page">
+        <div class="page-content landingpage">
+            <div class="introtext">
+                <!--<h1> Welcome</h1>-->
+                <!--<p>Flexilble Mobile application</p>-->
+            </div>
+            <div class="buttonbar row no-gutter" >
+                <div class="content-block col-100" style="color:#000000;text-align:center;">
+							<a href="#" onclick="check_net_home_page();" class="nextlink" style="color: #ffffff;background-color: rgba(255, 255, 255, 0.33);width: 25px;display:  inline-block;border-radius:  50%;height:  25px;line-height: 28px;" ><span class="fa fa-refresh "></span></a>
+							<br/>
+							<a href="#" onclick="check_net_home_page();" class="nextlink_text" style="color:#ffffff;">بررسی مجدد</a>
+							<br/>
+							<br/>
+                </div>
 
-sssssssssssssssss
+            </div>
+           <img src="img/no-image-t.png" style="background-image: url('img/banner1.png');background-size: cover;background-position:  center;background-repeat:  no-repeat;opacity:  1;" alt="" class="bgimg">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- JS link goes here --> 
+
 <script>
 var server_url = "https://dlsmgroup.ir/heyat/";
 var networkState;
@@ -86,8 +137,21 @@ setTimeout(function(){
 </script>
 
 <script type="text/javascript" src="js/jquery.min.js"></script> 
-<script src="cordova.js"></script>
+<!-- <script src="cordova.js"></script> -->
+<script type="text/javascript" src="js/framework7.min.js"></script> 
+<script type="text/javascript" src="js/jquery.swipebox.js"></script> 
+<!--<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>-->
+<!--<script type="text/javascript" src="https://www.google.com/jsapi"></script>-->
+<script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+<!-- <script type="text/javascript" src="contactform/validator.js"></script> -->
+<!-- <script type="text/javascript" src="contactform/contact.js"></script> -->
 
+<script type="text/javascript" src="js/lazyload.min.js"></script>
+<script type="text/javascript" src="js/notification.js"></script>
+<script type="text/javascript" src="js/persian_number_to_english.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/maxframes.js"></script>
+<script type="text/javascript" src="js/persian-date.min.js"></script>
 
 </body>
 </html>

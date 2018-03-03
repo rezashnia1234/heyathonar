@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="theme-color" content="#2196f3">
+<title>بسم الله الرحمن الرحیم</title>
+<!-- Font embedding link goes here -->
+<!--<link href='https://fonts.googleapis.com/css?family=Poppins:400,600,500,300' rel='stylesheet' type='text/css'>-->
+
+<!-- CSS link goes here -->
+<link rel="stylesheet" href="css/framework7.material.min.css">
+<link rel="stylesheet" href="css/framework7.material.colors.min.css">
+<link rel="stylesheet" href="css/framework7.material.rtl.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/swipebox.min.css">
+<link rel="stylesheet" href="css/maxframes.css">
+<link rel="stylesheet" href="css/fontiran.css">
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="theme-red">
+
+sssssssssssssssss
+<script>
+var server_url = "https://dlsmgroup.ir/heyat/";
+var networkState;
+
+function init() {
+	document.addEventListener("deviceready", onDeviceReady, false);
+}
+function onDeviceReady() {
+	console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start onDeviceReady()');
+
+	if(navigator.connection.type)
+		networkState = navigator.connection.type;
+	else
+		networkState = navigator.connection.effectiveType;
+
+	if(window.localStorage.getItem('udid') == null)
+		window.plugins.uniqueDeviceID.get(uniqueDeviceIDsuccess_index, uniqueDeviceIDfail_index);
+	function uniqueDeviceIDsuccess_index(udid){window.localStorage.setItem('udid',udid);};
+	function uniqueDeviceIDfail_index(udid){};
+
+	register_notification_home();
+
+
+	setTimeout(function(){
+		if(check_net(true,false))
+			check_net_home_page();
+	}, 500);
+	//myApp.init();
+}
+
+setTimeout(function(){
+	if(!window.cordova)
+	{
+		if(navigator.connection.type)
+			networkState = navigator.connection.type;
+		else
+			networkState = navigator.connection.effectiveType;
+
+		Connection = {};
+		Connection.NONE = "0000";
+		// Connection.NONE = "4g";
+		setTimeout(function(){
+			if(window.localStorage.getItem("udid")==null)
+				window.localStorage.setItem("udid","test");
+		}, 1500);
+
+		setTimeout(function(){
+			if(window.localStorage.getItem("notification_id")==null)
+				window.localStorage.setItem("notification_id","test");
+		}, 1500);
+		device = {};
+		device.platform = "iOS";
+		//document.querySelector('#myNavigator').pushPage('zaer_service_I_Lost_Something.html', {animation: "none"});
+
+		//myApp.init();
+		if(check_net(true,false))
+			check_net_home_page();
+	}
+}, 2500);
+</script>
+
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+<script src="cordova.js"></script>
+
+
+</body>
+</html>
