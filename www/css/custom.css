@@ -127,7 +127,7 @@ span.copyright-text {
     position: absolute;
     color: #000000;
     width: 100%;
-    bottom: 0;
+    bottom: -13px;
     background-color: #ffffff85;
     font-size: 15px;
     padding: 2px 16px;

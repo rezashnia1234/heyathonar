@@ -106,7 +106,8 @@ function init_virtual_list_of_news(){
 			temp_btn_gallery += '<div class="swiper-wrapper">';
 			for(var i=0;i<3;i++)
 			{
-				temp_btn_gallery += '<div class="swiper-slide" ><img src="img/no-image-t.png" style="background-image:url(\'' + server_url + arr[i].image + '\'),url(\'img/no-image.png\');width:100%;"><h2 onclick="goto_one_news_page(' + arr[i].id + ')">' + arr[i].title + '</h2></div>';
+				// temp_btn_gallery += '<div class="swiper-slide" ><img src="img/no-image-t.png" style="background-image:url(\'' + server_url + arr[i].image + '\'),url(\'img/no-image.png\');width:100%;"><h2 onclick="goto_one_news_page(' + arr[i].id + ')">' + arr[i].title + '</h2></div>';
+				temp_btn_gallery += '<div class="swiper-slide" ><div class="article" style="background-image:url(\'' + server_url + arr[i].image + '\'),url(\'img/no-image.png\');width:100%;margin:0;"><h2 onclick="goto_one_news_page(' + arr[i].id + ')">' + arr[i].title + '</h2></div></div>';
 			}
 			temp_btn_gallery += '</div>';
 			temp_btn_gallery += '<div class="swiper-button-prev"></div><div class="swiper-button-next"></div>';
@@ -132,7 +133,7 @@ function init_virtual_list_of_news(){
 									// '<img class="article" src="img/no-image-t.png" style="background-image:url(\'' + server_url + arr[i].image + '\'),url(\'img/no-image.png\');">' +
 									// '<img class="article lazyload" src="img/no-image.png" data-src="' + server_url + arr[i].image + '">' +
 									// '<div class="article lazyload" style="url(\'img/no-image.png\');" data-src2="background-image:url(\'' + server_url + arr[i].image + '\'),url(\'img/no-image.png\');"></div>' +
-									'<div class="article lazyload" style="url(\'img/no-image.png\');" data-src="' + server_url + arr[i].image + '"></div>' +
+									'<div class="article lazyload" style="background-image:url(\'img/no-image.png\');" data-src="' + server_url + arr[i].image + '"></div>' +
 									'<div class="content-block"><h2 onclick="goto_one_news_page(' + arr[i].id + ')">' + arr[i].title + '</h2>' +
 									'<p>' + (arr[i].introtext!=''?arr[i].introtext:'خبر متنی ندارد') + '</p>' +
 									'<a class="button " href="javascript:goto_one_news_page(' + arr[i].id + ')"><span class="btn_text">مطالعه بیشتر</span><span class="btn_date">' + arr[i].date + '</span></a></div>' +
@@ -224,7 +225,8 @@ function show_news(){
 		mainView.router.loadPage('blog.html');
 	
 	news = JSON.parse(news);
-	$$("#image-container").attr("src",server_url + news.image);
+	// $$("#image-container").attr("src",server_url + news.image);
+	$$("#image-container").html('<div class="article" style="background-image:url(\'' + server_url + news.image + '\'),url(\'img/no-image.png\');width:100%;margin:0;"></div>');
 	$$("#header-container").html(news.title);
 	$$("#text-container").html(news.text);
 	
