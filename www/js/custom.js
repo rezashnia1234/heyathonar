@@ -93,7 +93,13 @@ function check_net(show_alert,do_loop){
 }
 function init_virtual_list_of_news(){
 	myApp.showIndicator();
-	var news = JSON.parse(window.localStorage.getItem("news"));
+	try{
+		var news = JSON.parse(window.localStorage.getItem("news"));
+	}
+	catch(err){
+		console.log(err);
+		return false;
+	}
 	// console.log(news);
 	if(news.success == true)
 	{
@@ -222,9 +228,18 @@ function show_news(){
 	else if(window.localStorage.getItem("id_" + id)!==null)
 		news = window.localStorage.getItem("id_" + id);
 	else
+	{
 		mainView.router.loadPage('blog.html');
-	
-	news = JSON.parse(news);
+		return false;
+	}
+	try{
+		news = JSON.parse(news);
+	}
+	catch(err){
+		console.log(err);
+		mainView.router.loadPage('blog.html');
+		return false;
+	}
 	// $$("#image-container").attr("src",server_url + news.image);
 	$$("#image-container").html('<div class="article" style="background-image:url(\'' + server_url + news.image + '\'),url(\'img/no-image.png\');width:100%;margin:0;"></div>');
 	$$("#header-container").html(news.title);

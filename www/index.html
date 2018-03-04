@@ -22,20 +22,31 @@
 <link rel="stylesheet" href="css/custom.css">
 </head>
 <body class="theme-red">
+
+	
 <div class="statusbar-overlay"></div>
 <div class="panel-overlay"></div>
 <div class="panel panel-left panel-reveal sidebar">
   <div class="view">
     <div class=" ">
       <div data-page="panel-left" class="sidemenu leftmenusmall gradient">
+			<div class="item-content userprofile">
+					<div class="item-media"><img src="img/pic2.png" width="44"/></div>
+					<div class="item-inner">
+					  <div class="item-title-row">
+						<div class="item-title">هیئت هنر و رسانه</div>
+					  </div>
+					  <!-- <div class="item-subtitle">India</div> -->
+					</div>
+			</div>
           <div class="list-block accordion-list">
-					<br/><br/>
+					<div class="clear"></div>
               <ul class="menu">
 					   <li class="accordion-item">
-							<li><a href="index.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-map"></i><span>لیست اخبار</span></div></a></li>
-							<li><a href="index.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-map"></i><span>تماس با ما</span></div></a></li>
-							<li><a href="index.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-map"></i><span>درباره ما</span></div></a></li>
-							<li><a href="index.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-map"></i><span>تولید کننده</span></div></a></li>
+							<li><a href="blog.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-newspaper-o"></i><span>لیست اخبار</span></div></a></li>
+							<li><a href="favorites.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-star"></i><span>مطالب مورد علاقه</span></div></a></li>
+							<!-- <li><a href="index.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-map"></i><span>درباره ما</span></div></a></li> -->
+							<!-- <li><a href="index.html" class="item-link close-panel item-content "><div class="itemmeniinner"><i class="fa fa-map"></i><span>تولید کننده</span></div></a></li> -->
 						</li>         
               </ul>         
 			</div>
@@ -102,6 +113,10 @@ function onDeviceReady() {
 		if(check_net(true,false))
 			check_net_home_page();
 	}, 500);
+	
+	setTimeout(function(){
+		navigator.splashscreen.hide();
+	}, 1000);
 	//myApp.init();
 }
 

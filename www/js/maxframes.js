@@ -30,12 +30,18 @@ myApp.onPageInit('blog', function (page) {
 	init_virtual_list_of_news();
 });
 myApp.onPageInit('favorites', function (page) {
+	var height = $$(window).height();
+	$$(".favorites #favorites_content").css("min-height",height-157 + "px");
 	show_favorites();
 });
 myApp.onPageInit('blogdetails', function (page) {
+	var height = $$(window).height();
+	$$(".blogdetails article").css("min-height",height-157 + "px");
 	show_news();
 });
 myApp.init();
+
+
 // Show/hide preloader for remote ajax loaded pages
 // Probably should be removed on a production/local app
 $$(document).on('ajaxStart', function (e) {
