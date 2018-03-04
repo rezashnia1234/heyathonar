@@ -108,11 +108,11 @@ function onDeviceReady() {
 
 
 
+	register_notification_home();
 	setTimeout(function(){
 		if(check_net(true,false))
 		{
 			check_net_home_page();
-			register_notification_home();
 		}
 	}, 1500);
 	
@@ -156,6 +156,7 @@ setTimeout(function(){
 </script>
 
 <script type="text/javascript" src="js/jquery.min.js"></script> 
+<script type="text/javascript" src="js/console.log.js"></script> 
 <script src="cordova.js"></script>
 <script type="text/javascript" src="js/framework7.min.js"></script> 
 <script type="text/javascript" src="js/jquery.swipebox.js"></script> 
