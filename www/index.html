@@ -106,13 +106,15 @@ function onDeviceReady() {
 	function uniqueDeviceIDsuccess_index(udid){window.localStorage.setItem('udid',udid);};
 	function uniqueDeviceIDfail_index(udid){};
 
-	register_notification_home();
 
 
 	setTimeout(function(){
 		if(check_net(true,false))
+		{
 			check_net_home_page();
-	}, 500);
+			register_notification_home();
+		}
+	}, 1500);
 	
 	setTimeout(function(){
 		navigator.splashscreen.hide();
