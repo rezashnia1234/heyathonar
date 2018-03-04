@@ -287,8 +287,7 @@ function show_news(){
 	
 	for(var i=0;i<news.sound.length;i++)
 	{
-		var temp_btn = '<a onclick="cordova.InAppBrowser.open(\'' + server_url + news.sound[i][0] + '\',\'_system\',\'location=yes\');" class="button button-big button-fill button-raised color-teal" style="margin-bottom: 10px;" >' + news.sound[i][1] + '</a>';
-		temp_btn += '<a onclick="cordova.InAppBrowser.open(\'' + server_url + news.sound[i][0] + '\',\'_blank\',\'location=yes\');" class="button button-big button-fill button-raised color-teal" style="margin-bottom: 10px;" >' + news.sound[i][1] + '</a>';
+		var temp_btn = '<a onclick="window.open(\'' + server_url + news.sound[i][0] + '\',\'_system\');" class="button button-big button-fill button-raised color-teal" style="margin-bottom: 10px;" >' + news.sound[i][1] + '</a>';
 		$$("#sound-container").append(temp_btn);
 	}
 	
