@@ -31,12 +31,12 @@ myApp.onPageInit('blog', function (page) {
 });
 myApp.onPageInit('favorites', function (page) {
 	var height = $$(window).height();
-	$$(".favorites #favorites_content").css("min-height",height-152 + "px");
+	$$(".favorites #favorites_content").css("min-height",height-125 + "px");
 	show_favorites();
 });
 myApp.onPageInit('blogdetails', function (page) {
 	var height = $$(window).height();
-	$$(".blogdetails article").css("min-height",height-152 + "px");
+	$$(".blogdetails article").css("min-height",height-117 + "px");
 	show_news();
 });
 myApp.init();

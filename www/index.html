@@ -117,6 +117,9 @@ function onDeviceReady() {
 	setTimeout(function(){
 		navigator.splashscreen.hide();
 	}, 1000);
+	
+	window.open = cordova.InAppBrowser.open;
+	
 	//myApp.init();
 }
 
