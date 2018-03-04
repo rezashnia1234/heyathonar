@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="css/fontiran.css">
 <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="theme-red">
+<body class="theme-red" onload="init();">
 
 	
 <div class="statusbar-overlay"></div>
@@ -95,7 +95,7 @@ function init() {
 }
 function onDeviceReady() {
 	console.log('SMGROUP ::::::::::::::::::::::::::::::::::::    start onDeviceReady()');
-
+	
 	if(navigator.connection.type)
 		networkState = navigator.connection.type;
 	else
@@ -111,14 +111,12 @@ function onDeviceReady() {
 	register_notification_home();
 	setTimeout(function(){
 		if(check_net(true,false))
-		{
 			check_net_home_page();
-		}
-	}, 1500);
+	}, 500);
 	
-	setTimeout(function(){
-		navigator.splashscreen.hide();
-	}, 1000);
+	//setTimeout(function(){
+	//	navigator.splashscreen.hide();
+	//}, 1000);
 	
 	
 	//myApp.init();
@@ -156,7 +154,7 @@ setTimeout(function(){
 </script>
 
 <script type="text/javascript" src="js/jquery.min.js"></script> 
-<script type="text/javascript" src="js/console.log.js"></script> 
+<!-- <script type="text/javascript" src="js/console.log.js"></script>  -->
 <script src="cordova.js"></script>
 <script type="text/javascript" src="js/framework7.min.js"></script> 
 <script type="text/javascript" src="js/jquery.swipebox.js"></script> 
