@@ -102,7 +102,7 @@ div#gallery-container .ks-carousel-slider .swiper-slide {
 .socialblock {
     position: relative;
     overflow: hidden;
-    padding: 16px 16px;
+    padding: 3px 16px;
 
 }
 span.copyright-text {
@@ -132,7 +132,7 @@ span.copyright-text {
     bottom: -13px;
     background-color: rgba(255, 255, 255, 0.52);
     font-size: 15px;
-    padding: 2px 16px;
+    padding: 10px 16px 6px 16px;
 }
 .blog .swiper-pagination.swiper-pagination-c2.swiper-pagination-bullets {
     display: none;
@@ -140,9 +140,16 @@ span.copyright-text {
 .blogdetails .list-block.media-list {
     margin-top: 0;
 }
-
-
-
+.socials li {
+    margin: 0px auto -8px auto;
+}
+.panel.panel-left.panel-reveal .userprofile .item-media {
+    width: 120px;
+    height: 120px;
+}
+.sidemenu .userprofile .item-title {
+    font-size: 16px;
+}
 
 
 
