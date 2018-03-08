@@ -21,20 +21,28 @@ var mainView = myApp.addView('.view-main', {
 });
 
 myApp.onPageInit('index', function (page) {
-	/*if(check_net(true,false))
-	{
-		check_net_home_page();
-	}*/
+	// document.removeEventListener("backbutton", go_back_index);
+	document.addEventListener("backbutton", go_back_index, false);
 });
 myApp.onPageInit('blog', function (page) {
+	document.removeEventListener("backbutton", goto_blog);
+	document.removeEventListener("backbutton", go_back_index);
+	document.addEventListener("backbutton", go_back_index, false);
+	
 	init_virtual_list_of_news();
 });
 myApp.onPageInit('favorites', function (page) {
+	document.removeEventListener("backbutton", go_back_index);
+	document.addEventListener("backbutton", goto_blog, false);
+	
 	var height = $$(window).height();
 	$$(".favorites #favorites_content").css("min-height",height-125 + "px");
 	show_favorites();
 });
 myApp.onPageInit('blogdetails', function (page) {
+	document.removeEventListener("backbutton", go_back_index);
+	document.addEventListener("backbutton", goto_blog, false);
+	
 	var height = $$(window).height();
 	$$(".blogdetails article").css("min-height",height-117 + "px");
 	show_news();

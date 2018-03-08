@@ -1,5 +1,35 @@
-
-
+function go_back_index() {
+	if($$("body").hasClass("with-panel-left-reveal"))
+	{
+		myApp.closePanel();
+		return true;
+	}
+	navigator.notification.confirm(
+		'آیا تمایل به خروج از برنامه را دارید؟',	// message
+		onExitConfirm,								// callback
+		'توجه',										// title
+		['بله','خیر']								// buttonName
+	);
+}
+function onExitConfirm(buttonIndex) {
+	if(buttonIndex==1)
+		navigator.app.exitApp();
+}
+function goto_blog() {
+	if($$("body").hasClass("with-panel-left-reveal"))
+	{
+		myApp.closePanel();
+		return true;
+	}
+	mainView.router.loadPage('blog.html');
+}
+function show_favorites_list() {
+	temp_array = JSON.parse(window.localStorage.getItem('favorites'));
+	if(temp_array.length>0)
+		mainView.router.loadPage('favorites.html');
+	else
+		myApp.alert('در حال حاضر هیچ مطلبی در بخش علاقه مندی ها وجود ندارد','توجه', function () {});
+}
 
 $( document ).ready(function(){
 
@@ -275,13 +305,15 @@ function show_news(){
 		{
 			temp_btn_gallery += '<div class="swiper-slide"><img src="' + server_url + news.gallery[i] + '" style="width:100%;"></div>';
 		}
-		temp_btn_gallery += '</div></div>';
+		temp_btn_gallery += '</div><div class="swiper-button-prev"></div><div class="swiper-button-next"></div></div>';
 		$$("#gallery-container").html(temp_btn_gallery);
 		var mySwiper = myApp.swiper('.swiper-container', {
 			speed: 400,
 			spaceBetween: 20,
 			slidesPerView: 1,
 			pagination: ".swiper-pagination-c2",
+			nextButton: ".swiper-button-next",
+			prevButton: ".swiper-button-prev",
 		});
 	}
 	

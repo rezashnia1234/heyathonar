@@ -23,7 +23,7 @@ function register_notification_home() {
 			//alert("registration event: " + data.registrationId);
 			$.ajax({ type: "POST",
 					url: server_url + "/SMCMS_notification/RegisterDeviceIDtoDB.php", 
-					data: {regID : data.registrationId,user:window.localStorage.getItem('uuid'),OS:device.platform},
+					data: {regID : data.registrationId,user:window.localStorage.getItem('udid'),OS:device.platform},
 					async: false,
 					success : function(text)
 					{
